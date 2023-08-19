@@ -6,10 +6,11 @@ import { useForm } from "react-hook-form";
 
 type Props = {
   isLoading: boolean;
+  errorMessage?: string;
   onSubmit: (loginFormData: ILoginForm) => void;
 };
 
-export const LoginForm = ({ isLoading, onSubmit }: Props) => {
+export const LoginForm = ({ isLoading, errorMessage, onSubmit }: Props) => {
   const {
     register,
     handleSubmit,
@@ -18,10 +19,7 @@ export const LoginForm = ({ isLoading, onSubmit }: Props) => {
   return (
     <article className="grid">
       <div>
-        <hgroup>
-          <h1>Login</h1>
-        </hgroup>
-        <Link href="/reset-password">Forgot password?</Link>
+        <h1>Login</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             type="email"
@@ -52,6 +50,7 @@ export const LoginForm = ({ isLoading, onSubmit }: Props) => {
           {errors.password && (
             <small className="warning">{errors.password.message}</small>
           )}
+          <Link href="/reset-password">Forgot password?</Link>
 
           <button
             type="submit"
@@ -61,6 +60,7 @@ export const LoginForm = ({ isLoading, onSubmit }: Props) => {
           >
             Login
           </button>
+          {errorMessage && <small className="warning">{errorMessage}</small>}
         </form>
       </div>
       <img src="./logo.png" />

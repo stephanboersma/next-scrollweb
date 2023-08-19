@@ -28,10 +28,11 @@ const Login = () => {
   return (
     <LandingPageLayout showFooter={false}>
       <main className="container">
-        <LoginForm isLoading={isLoading} onSubmit={handleLogin} />
-        {loginErrorMessage && (
-          <small className="warning">{loginErrorMessage}</small>
-        )}
+        <LoginForm
+          isLoading={isLoading}
+          errorMessage={loginErrorMessage}
+          onSubmit={handleLogin}
+        />
       </main>
     </LandingPageLayout>
   );
