@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from "@styles/login-form.module.scss";
+import styles from "@styles/form.module.scss";
 import { ILoginForm } from "@typing/interfaces/login-form.interface";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
@@ -17,7 +16,7 @@ export const LoginForm = ({ isLoading, errorMessage, onSubmit }: Props) => {
     formState: { errors },
   } = useForm<ILoginForm>();
   return (
-    <article className="grid">
+    <article className={`${styles.form} grid`}>
       <div>
         <h1>Login</h1>
         <form onSubmit={handleSubmit(onSubmit)}>

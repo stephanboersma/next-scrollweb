@@ -19,6 +19,7 @@ export const AUTH_ERRORS = {
     "A user already exists with this e-mail address.",
   "auth/invalid-email": "The e-mail is invalid",
 };
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const createAccountWithEmailAndPassword = (form: any) => {
   return new Promise((resolve, reject) => {
     createUserWithEmailAndPassword(auth, form.email, form.password)

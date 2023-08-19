@@ -1,4 +1,5 @@
 import { IResetPasswordForm } from "@typing/interfaces/reset-password-form.interface";
+import styles from "../styles/form.module.scss";
 import { useForm } from "react-hook-form";
 
 type Props = {
@@ -14,7 +15,7 @@ const ResetPasswordForm = ({ isLoading, errorMessage, onSubmit }: Props) => {
     formState: { errors },
   } = useForm<IResetPasswordForm>();
   return (
-    <article className="grid">
+    <article className={`${styles.form} grid`}>
       <div>
         <h1>Reset Password</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -42,7 +43,7 @@ const ResetPasswordForm = ({ isLoading, errorMessage, onSubmit }: Props) => {
           {errorMessage && <small className="warning">{errorMessage}</small>}
         </form>
       </div>
-      <img src="./logo.png" />
+      <img src="./logo.png" alt="ScrollBar Logo" />
     </article>
   );
 };

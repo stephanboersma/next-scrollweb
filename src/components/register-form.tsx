@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from "@styles/login-form.module.scss";
+import styles from "@styles/form.module.scss";
 export const RegisterForm = () => {
   return (
-    <article className="grid">
+    <article className={`${styles.form} grid`}>
       <div>
         <h1>Register</h1>
         <form>

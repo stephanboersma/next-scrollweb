@@ -7,7 +7,11 @@ export const NavbarHorizontal = ({ children }) => {
         <ul>
           <li>
             <a href="./" className="contrast">
-              <img src="./logo.png" className={styles.sbLogo} />
+              <img
+                src="./logo.png"
+                className={styles.sbLogo}
+                alt="ScrollBar Logo"
+              />
             </a>
           </li>
         </ul>

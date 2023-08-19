@@ -9,7 +9,11 @@ export const Footer = () => {
     <div className="container">
       <div className="grid">
         <div>
-          <img src="./logo.png" style={{ maxHeight: "250px" }} />
+          <img
+            src="./logo.png"
+            style={{ maxHeight: "250px" }}
+            alt="ScrollBar Logo"
+          />
         </div>
         <div>
           <h5>Address</h5>
