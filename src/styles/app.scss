@@ -8,7 +8,20 @@ $enable-semantic-container: true;
 
 // Enable .classes
 $enable-classes: true;
-$primary-500: #fff319;
+
+$primary-hue: 57;
 
 // Import Pico
 @import "@picocss/pico/scss/pico";
+
+:root body:not([data-theme="dark"]) {
+  --background-color: #f0f2f5;
+}
+
+body {
+  margin: 0;
+}
+
+.warning {
+  color: orange;
+}

@@ -1,8 +1,13 @@
+import { LandingPageLayout } from "@components/landing-page-layout";
+import { RegisterForm } from "@components/register-form";
+
 const Register = () => {
   return (
-    <div>
-      <h1>Register</h1>
-    </div>
+    <LandingPageLayout showFooter={false}>
+      <main className="container">
+        <RegisterForm />
+      </main>
+    </LandingPageLayout>
   );
 };
 
