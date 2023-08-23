@@ -1,40 +1,51 @@
-import { LandingPageLayout } from "@components/landing-page-layout";
+import { HorizontalNavbarLayout } from "@components/landing/horizontal-navbar-layout";
 import { LoginForm } from "@components/login-form";
-import {
-  AUTH_ERRORS,
-  loginWithEmailAndPassword,
-} from "@firebase/authentication";
+import { AUTH_ERRORS, loginWithEmailAndPassword } from "@fire/authentication";
+import { useStore } from "@store/store";
 import { ILoginForm } from "@typing/interfaces/login-form.interface";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { shallow } from "zustand/shallow";
 
 const Login = () => {
+  const { isAuthLoading, setIsAuthLoading, user } = useStore(
+    (state) => ({
+      isAuthLoading: state.isAuthLoading,
+      setIsAuthLoading: state.setIsAuthLoading,
+      user: state.user,
+    }),
+    shallow
+  );
   const [loginErrorMessage, setLoginErrorMessage] = useState<string>(null);
-  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   const handleLogin = async (loginFormData: ILoginForm) => {
-    setIsLoading(true);
+    setIsAuthLoading(true);
     try {
       await loginWithEmailAndPassword(loginFormData);
-      setIsLoading(false);
-      router.push("/tender");
     } catch (err) {
       console.table(err);
       setLoginErrorMessage(AUTH_ERRORS[err.code]);
-      setIsLoading(false);
+      setIsAuthLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (user && !isAuthLoading) {
+      router.push("/member");
+    }
+  }, [user, isAuthLoading]);
+
   return (
-    <LandingPageLayout showFooter={false}>
+    <HorizontalNavbarLayout>
       <main className="container">
         <LoginForm
-          isLoading={isLoading}
+          isLoading={isAuthLoading}
           errorMessage={loginErrorMessage}
           onSubmit={handleLogin}
         />
       </main>
-    </LandingPageLayout>
+    </HorizontalNavbarLayout>
   );
 };
 

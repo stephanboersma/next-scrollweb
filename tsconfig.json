@@ -20,7 +20,8 @@
       "@styles/*": ["src/styles/*"],
       "@typing/*": ["src/typing/*"],
       "@store/*": ["src/store/*"],
-      "@firebase/*": ["src/firebase/*"]
+      "@fire/*": ["src/firebase/*"],
+      "@public/*": ["public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

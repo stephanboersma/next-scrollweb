@@ -1,6 +1,10 @@
 .form {
   padding: 0;
   overflow: hidden;
+
+  .logo {
+    display: none;
+  }
 }
 
 .form div {
@@ -22,6 +26,11 @@
 @media (min-width: 992px) {
   .form div {
     padding: 1.75rem;
+  }
+  .form {
+    .logo {
+      display: block;
+    }
   }
 }
 

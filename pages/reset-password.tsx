@@ -1,6 +1,6 @@
-import { LandingPageLayout } from "@components/landing-page-layout";
+import { HorizontalNavbarLayout } from "@components/index";
 import ResetPasswordForm from "@components/reset-password-form";
-import { sendResetPasswordEmail } from "@firebase/authentication";
+import { sendResetPasswordEmail } from "@fire/authentication";
 import { IResetPasswordForm } from "@typing/interfaces/reset-password-form.interface";
 import { useState } from "react";
 
@@ -29,7 +29,7 @@ const ResetPassword = () => {
     }
   };
   return (
-    <LandingPageLayout showFooter={false}>
+    <HorizontalNavbarLayout>
       <main className="container">
         <ResetPasswordForm
           isLoading={isLoading}
@@ -37,7 +37,7 @@ const ResetPassword = () => {
           onSubmit={handlePasswordReset}
         />
       </main>
-    </LandingPageLayout>
+    </HorizontalNavbarLayout>
   );
 };
 export default ResetPassword;

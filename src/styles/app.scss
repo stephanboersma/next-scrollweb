@@ -14,12 +14,14 @@ $primary-hue: 57;
 // Import Pico
 @import "@picocss/pico/scss/pico";
 
-:root body:not([data-theme="dark"]) {
+/* :root body:not([data-theme="dark"]) {
   --background-color: #f0f2f5;
-}
+} */
 
+html,
 body {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 .warning {

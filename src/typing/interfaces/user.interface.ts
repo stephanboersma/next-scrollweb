@@ -1,8 +1,8 @@
 import { Roles } from "../enums";
+import { IFirestoreEntity } from "./firestore-entity.interface";
 import { IStudyline } from "./studyline.interface";
 
-export interface IUser {
-  id?: string;
+export interface IUser extends IFirestoreEntity {
   isAdmin?: boolean;
   active: boolean;
   displayName: string;

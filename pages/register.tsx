@@ -1,13 +1,13 @@
-import { LandingPageLayout } from "@components/landing-page-layout";
+import { HorizontalNavbarLayout } from "@components/index";
 import { RegisterForm } from "@components/register-form";
 
 const Register = () => {
   return (
-    <LandingPageLayout showFooter={false}>
+    <HorizontalNavbarLayout>
       <main className="container">
         <RegisterForm />
       </main>
-    </LandingPageLayout>
+    </HorizontalNavbarLayout>
   );
 };
 
