@@ -1,0 +1,14 @@
+{
+  "plugins": ["@typescript-eslint", "import", "unused-imports"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "unused-imports/no-unused-imports": "error",
+    "react-hooks/exhaustive-deps": "off"
+  }
+}

@@ -1,0 +1,29 @@
+/* Custom Class-less version for React */
+
+// Set the root element
+$semantic-root-element: "#__next";
+
+// Enable <header>, <main>, <footer> inside $semantic-root-element as containers
+$enable-semantic-container: true;
+
+// Enable .classes
+$enable-classes: true;
+
+$primary-hue: 57;
+
+// Import Pico
+@import "@picocss/pico/scss/pico";
+
+/* :root body:not([data-theme="dark"]) {
+  --background-color: #f0f2f5;
+} */
+
+html,
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.warning {
+  color: orange;
+}

@@ -1,0 +1,47 @@
+.sbHero {
+  position: relative;
+  min-height: 30vh;
+  max-height: 80vh;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  overflow: hidden;
+
+  .sbHeroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: var(--spacing);
+
+    header {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      padding: 24px;
+      background-color: rgba(255, 243, 25, 0.8);
+    }
+  }
+  header > p,
+  hgroup > h1,
+  h2 {
+    color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .sbHero {
+    .sbHeroOverlay {
+      header {
+        position: relative;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}

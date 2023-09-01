@@ -1,0 +1,31 @@
+.sbLogo {
+  height: 100px;
+}
+
+.sbMobileNav {
+  details[role="list"] summary::after,
+  li[role="list"] > a::after {
+    display: none;
+  }
+  details[role="list"] {
+    margin: 0;
+  }
+}
+.sbDesktopNav {
+  display: none;
+}
+
+// Show desktop nav on Laptop size and up
+@media (min-width: 1024px) {
+  .sbDesktopNav {
+    display: flex;
+  }
+  .sbMobileNav {
+    display: none;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
