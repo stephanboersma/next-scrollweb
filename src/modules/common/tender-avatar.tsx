@@ -1,6 +1,6 @@
 import { ITender } from "@typing/interfaces/tender.interface";
 import Image from "next/image";
-import styles from "@styles/tender-avatar.module.scss";
+import styles from "./styles/tender-avatar.module.scss";
 
 type Props = {
   tender: ITender;

@@ -1,5 +1,5 @@
-import { HorizontalNavbarLayout } from "@components/landing/horizontal-navbar-layout";
-import { LoginForm } from "@components/login-form";
+import { HorizontalNavbarLayout } from "@modules/common";
+import { LoginForm } from "@modules/auth/login-form";
 import { AUTH_ERRORS, loginWithEmailAndPassword } from "@fire/authentication";
 import { useStore } from "@store/store";
 import { ILoginForm } from "@typing/interfaces/login-form.interface";

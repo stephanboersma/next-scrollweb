@@ -16,8 +16,8 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@styles/*": ["src/styles/*"],
+      "@modules/*": ["src/modules/*"],
+      "@styles/*": ["src/modules/common/styles/*"],
       "@typing/*": ["src/typing/*"],
       "@store/*": ["src/store/*"],
       "@fire/*": ["src/firebase/*"],

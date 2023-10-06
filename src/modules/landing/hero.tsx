@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "@styles/hero.module.scss";
+import styles from "./styles/hero.module.scss";
 import { IEvent } from "@typing/interfaces/event.interface";
 import { formatDate } from "src/utils/date.utils";
 import dynamic from "next/dynamic";

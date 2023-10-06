@@ -1,5 +1,5 @@
-import { HorizontalNavbarLayout } from "@components/index";
-import { RegisterForm } from "@components/register-form";
+import { HorizontalNavbarLayout } from "@modules/common";
+import { RegisterForm } from "@modules/auth/register-form";
 import { AUTH_ERRORS, createAccountWithEmailAndPassword } from "@fire/index";
 import { useStore } from "@store/store";
 import { IRegisterForm } from "@typing/interfaces/register-form.interface";

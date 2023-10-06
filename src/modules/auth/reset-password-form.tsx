@@ -1,5 +1,5 @@
 import { IResetPasswordForm } from "@typing/interfaces/reset-password-form.interface";
-import styles from "../styles/form.module.scss";
+import styles from "@styles/form.module.scss";
 import { useForm } from "react-hook-form";
 import logo from "@public/logo.png";
 import Image from "next/image";
@@ -9,7 +9,7 @@ type Props = {
   onSubmit: (formData: IResetPasswordForm) => void;
 };
 
-const ResetPasswordForm = ({ isLoading, errorMessage, onSubmit }: Props) => {
+export const ResetPasswordForm = ({ isLoading, errorMessage, onSubmit }: Props) => {
   const {
     register,
     handleSubmit,
@@ -55,4 +55,4 @@ const ResetPasswordForm = ({ isLoading, errorMessage, onSubmit }: Props) => {
   );
 };
 
-export default ResetPasswordForm;
+

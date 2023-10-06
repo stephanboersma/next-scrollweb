@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
-import "../src/styles/app.scss";
+import "@styles/app.scss";
 import { ThemeProvider } from "next-themes";
-import AuthProvider from "@components/common/auth-provider";
+import AuthProvider from "src/modules/common/auth-provider";
 import { Toaster } from "react-hot-toast";
 
 const App = ({ Component, pageProps }: AppProps) => {

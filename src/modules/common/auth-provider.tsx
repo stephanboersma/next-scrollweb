@@ -5,7 +5,7 @@ import { shallow } from "zustand/shallow";
 import { getUser } from "../../firebase/authentication";
 import { useStore } from "@store/store";
 
-const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
   const { setUser, setIsAuthLoading } = useStore(
     (state) => ({
       user: state.user,
@@ -16,11 +16,12 @@ const AuthProvider = ({ children }) => {
   );
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (authState) => {
-      if (authState && authState.uid) {
-        const user = await getUser(authState.uid);
-        setUser(user);
-        setIsAuthLoading(false);
+    const unsubscribe = onAuthStateChanged(auth, (authState) => {
+      if (authState?.uid) {
+       getUser(authState.uid).then((user) => {
+          setUser(user);
+          setIsAuthLoading(false);
+        }).catch(() => setIsAuthLoading(false));
       } else {
         setUser(null);
         setIsAuthLoading(false);
