@@ -4,4 +4,5 @@ export interface IStudyline extends IFirestoreEntity {
   abbreviation: string;
   name: string;
   prefix: string;
+  active: boolean;
 }
