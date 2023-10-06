@@ -33,12 +33,11 @@ export const HorizontalNavbarLayout = ({ children }) => {
             style={{ cursor: "pointer" }}
             onClick={() => setTheme(theme == "light" ? "dark" : "light")}
           >
-            Theme{" "}
             {theme == "dark" ? (
               <FaSun fontSize="20px" />
             ) : (
               <FaMoon fontSize="20px" />
-            )}{" "}
+            )}
           </a>
         </li>
       </NavbarHorizontal>

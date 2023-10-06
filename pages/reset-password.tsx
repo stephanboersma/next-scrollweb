@@ -1,5 +1,5 @@
-import { HorizontalNavbarLayout } from "@components/index";
-import ResetPasswordForm from "@components/reset-password-form";
+import { HorizontalNavbarLayout } from "@modules/common";
+import { ResetPasswordForm } from "@modules/auth";
 import { sendResetPasswordEmail } from "@fire/authentication";
 import { IResetPasswordForm } from "@typing/interfaces/reset-password-form.interface";
 import { useState } from "react";

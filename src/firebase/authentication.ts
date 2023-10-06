@@ -9,6 +9,7 @@ import { auth, db } from ".";
 import { IUser } from "@typing/interfaces/user.interface";
 import { Roles } from "@typing/enums";
 import { ILoginForm } from "@typing/interfaces/login-form.interface";
+import { IRegisterForm } from "@typing/interfaces/register-form.interface";
 
 export const AUTH_ERRORS = {
   "auth/wrong-password":
@@ -19,13 +20,14 @@ export const AUTH_ERRORS = {
     "A user already exists with this e-mail address.",
   "auth/invalid-email": "The e-mail is invalid",
 };
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const createAccountWithEmailAndPassword = (form: any) => {
+export const createAccountWithEmailAndPassword = (
+  form: IRegisterForm
+): Promise<IUser> => {
   return new Promise((resolve, reject) => {
     createUserWithEmailAndPassword(auth, form.email, form.password)
       .then(async () => {
         const userData: IUser = {
-          displayName: `${form.firstname} ${form.surname}`,
+          displayName: `${form.firstname} ${form.lastname}`,
           email: form.email,
           studyline: form.studyline,
           isAdmin: false,

@@ -1,4 +1,4 @@
-import { PrivateRoute } from "@components/common/private-route";
+import { PrivateRoute } from "src/modules/common/private-route";
 import { Roles } from "@typing/enums";
 
 const Users = () => {

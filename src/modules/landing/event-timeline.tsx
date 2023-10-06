@@ -19,9 +19,9 @@ export const EventTimeline = ({ events }: Props) => {
       animate={false}
       style={{ width: "100%" }}
     >
-      {events.map((event, index) => (
+      {events.map((event) => (
         <VerticalTimelineElement
-          key={index}
+          key={event.id}
           icon={<FaCalendar />}
           date={formatDate(event.startDate)}
           contentStyle={{

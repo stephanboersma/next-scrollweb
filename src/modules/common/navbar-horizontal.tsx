@@ -1,7 +1,8 @@
-import styles from "@styles/navbar.module.scss";
+import styles from "./styles/navbar.module.scss";
 import { FaBars } from "react-icons/fa";
 import logo from "@public/logo.png";
 import Image from "next/image";
+
 export const NavbarHorizontal = ({ children }) => {
   return (
     <div className="container-fluid">

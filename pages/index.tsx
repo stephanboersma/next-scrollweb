@@ -1,12 +1,12 @@
-import { Hero } from "@components/landing/hero";
-import { HorizontalNavbarLayout } from "@components/landing/horizontal-navbar-layout";
+import { Hero } from "src/modules/landing/hero";
+import { HorizontalNavbarLayout } from "@modules/common/horizontal-navbar-layout";
 import { ITender } from "@typing/interfaces/tender.interface";
 import { GetServerSideProps } from "next";
-import { TenderAvatar } from "@components/common/tender-avatar";
+import { TenderAvatar } from "src/modules/common/tender-avatar";
 import { IEvent } from "@typing/interfaces/event.interface";
-import { EventTimeline } from "@components/landing/event-timeline";
+import { EventTimeline } from "src/modules/landing/event-timeline";
 import { ISettings } from "@typing/interfaces/settings.interface";
-import { Footer } from "@components/index";
+import { Footer } from "@modules/landing";
 
 type Props = {
   tenders: ITender[];
