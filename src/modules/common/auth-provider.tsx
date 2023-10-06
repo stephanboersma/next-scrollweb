@@ -18,10 +18,12 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (authState) => {
       if (authState?.uid) {
-       getUser(authState.uid).then((user) => {
-          setUser(user);
-          setIsAuthLoading(false);
-        }).catch(() => setIsAuthLoading(false));
+        getUser(authState.uid)
+          .then((user) => {
+            setUser(user);
+            setIsAuthLoading(false);
+          })
+          .catch(() => setIsAuthLoading(false));
       } else {
         setUser(null);
         setIsAuthLoading(false);

@@ -19,7 +19,7 @@ export const PrivateRoute = ({ children, roles }: Props) => {
     shallow
   );
   const hasPermission = () => {
-    return roles.every(
+    return roles.some(
       (role) => user && (user.roles.includes(role) || user.isAdmin)
     );
   };

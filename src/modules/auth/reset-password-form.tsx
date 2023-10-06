@@ -9,7 +9,11 @@ type Props = {
   onSubmit: (formData: IResetPasswordForm) => void;
 };
 
-export const ResetPasswordForm = ({ isLoading, errorMessage, onSubmit }: Props) => {
+export const ResetPasswordForm = ({
+  isLoading,
+  errorMessage,
+  onSubmit,
+}: Props) => {
   const {
     register,
     handleSubmit,
@@ -54,5 +58,3 @@ export const ResetPasswordForm = ({ isLoading, errorMessage, onSubmit }: Props) 
     </article>
   );
 };
-
-

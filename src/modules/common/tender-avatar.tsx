@@ -8,19 +8,21 @@ type Props = {
 
 export const TenderAvatar = ({ tender }: Props) => {
   return (
-    <div className={styles.sbTenderAvatar}>
+    <div className={styles.tenderAvatar}>
       <span>
         <Image
           src={tender.photoUrl}
           alt={tender.displayName}
           width={100}
           height={100}
-          className={styles.sbTenderImage}
+          className={styles.tenderImage}
         />
       </span>
       <div />
       <strong>{tender.displayName}</strong>
-      <small>{tender.studyline.abbreviation.toUpperCase()}</small>
+      {tender?.studyline && (
+        <small>{tender.studyline.abbreviation.toUpperCase()}</small>
+      )}
     </div>
   );
 };

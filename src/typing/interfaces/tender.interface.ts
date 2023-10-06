@@ -4,5 +4,5 @@ export interface ITender {
   id: string;
   displayName: string;
   photoUrl: string;
-  studyline: IStudyline;
+  studyline?: IStudyline;
 }

@@ -1,12 +1,11 @@
-.sbTenderAvatar {
+.tenderAvatar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: space-between;
-  padding: 1rem;
-  max-width: 150px;
+  align-items: center;
+  width: 200px;
   text-align: center;
   font-size: 14px;
+  height: auto;
 
   span {
     height: 100px;
@@ -15,7 +14,7 @@
     margin-bottom: 6px;
   }
 
-  .sbTenderImage {
+  .tenderImage {
     border-radius: 50%;
     object-fit: cover;
     width: 100%;

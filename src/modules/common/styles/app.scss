@@ -9,14 +9,23 @@ $enable-semantic-container: true;
 // Enable .classes
 $enable-classes: true;
 
-$primary-hue: 57;
+/* $primary-hue: 57; */
 
 // Import Pico
 @import "@picocss/pico/scss/pico";
 
-/* :root body:not([data-theme="dark"]) {
-  --background-color: #f0f2f5;
-} */
+:root {
+  --nav-background-color: rgba(16, 24, 30, 0.8);
+  --nav-border-color: rgba(115, 130, 140, 0.2);
+}
+/* Yellow Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #fff319;
+  --primary-hover: #ffeb3b;
+  --primary-focus: rgba(253, 216, 53, 0.25);
+  --primary-inverse: rgba(0, 0, 0, 0.75);
+}
 
 html,
 body {
@@ -26,4 +35,13 @@ body {
 
 .warning {
   color: orange;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }

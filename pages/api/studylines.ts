@@ -7,7 +7,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 export const GET = async (_req: NextApiRequest, res: NextApiResponse) => {
   try {
     await initializeAdmin();
-    const firestore = await getFirestore();
+    const firestore = getFirestore();
     const q = query(
       collection(firestore, "studylines"),
       where("active", "==", true)

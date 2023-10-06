@@ -38,7 +38,7 @@ const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     await initializeAdmin();
-    const firestore = await getFirestore();
+    const firestore = getFirestore();
     const q = query(
       collection(firestore, "users"),
       orderBy("displayName", "asc"),

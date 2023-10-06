@@ -16,7 +16,7 @@ const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     await initializeAdmin();
-    const firestore = await getFirestore();
+    const firestore = getFirestore();
 
     const settings = await getDocument<ISettings>(
       doc(firestore, "settings", "settings")

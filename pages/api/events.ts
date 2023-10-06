@@ -16,7 +16,7 @@ const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     await initializeAdmin();
-    const firestore = await getFirestore();
+    const firestore = getFirestore();
     const today = new Date();
     const q = query(
       collection(firestore, "env", process.env.NEXT_PUBLIC_ENV, "events"),

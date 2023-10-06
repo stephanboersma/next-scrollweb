@@ -1,4 +1,4 @@
-.sbHero {
+.hero {
   position: relative;
   min-height: 30vh;
   max-height: 80vh;
@@ -7,7 +7,7 @@
   padding-left: 0;
   overflow: hidden;
 
-  .sbHeroOverlay {
+  .heroOverlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -35,8 +35,8 @@
 }
 
 @media (max-width: 768px) {
-  .sbHero {
-    .sbHeroOverlay {
+  .hero {
+    .heroOverlay {
       header {
         position: relative;
         bottom: 0;

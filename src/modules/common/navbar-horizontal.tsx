@@ -12,7 +12,7 @@ export const NavbarHorizontal = ({ children }) => {
             <a href="./" className="contrast">
               <Image
                 src={logo}
-                className={styles.sbLogo}
+                className={styles.logo}
                 alt="ScrollBar Logo"
                 width={140}
                 height={100}
@@ -21,7 +21,7 @@ export const NavbarHorizontal = ({ children }) => {
           </li>
         </ul>
 
-        <ul className={styles.sbMobileNav}>
+        <ul className={styles.mobileNav}>
           <details role="list" dir="rtl">
             <summary aria-haspopup="listbox" role="link">
               <FaBars fontSize="32px" />
@@ -29,7 +29,7 @@ export const NavbarHorizontal = ({ children }) => {
             <ul role="listbox">{children}</ul>
           </details>
         </ul>
-        <ul className={styles.sbDesktopNav}>{children}</ul>
+        <ul className={styles.desktopNav}>{children}</ul>
       </nav>
     </div>
   );

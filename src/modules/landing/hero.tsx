@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./styles/hero.module.scss";
 import { IEvent } from "@typing/interfaces/event.interface";
-import { formatDate } from "src/utils/date.utils";
+import { formatDate } from "@utils/date.utils";
 import dynamic from "next/dynamic";
 
 type Props = {
@@ -19,7 +19,7 @@ export const Hero = ({ nextEvent }: Props) => {
     }
   }, []);
   return (
-    <div className={`${styles.sbHero} container-fluid`}>
+    <div className={`${styles.hero} container-fluid`}>
       {hasWindow && (
         <ReactPlayer
           width="100%"
@@ -30,7 +30,7 @@ export const Hero = ({ nextEvent }: Props) => {
           url="./hero-video.mp4"
         />
       )}
-      <div className={styles.sbHeroOverlay}>
+      <div className={styles.heroOverlay}>
         <header className="container">
           <hgroup>
             <h1>ScrollBar</h1>

@@ -21,7 +21,8 @@
       "@typing/*": ["src/typing/*"],
       "@store/*": ["src/store/*"],
       "@fire/*": ["src/firebase/*"],
-      "@public/*": ["public/*"]
+      "@public/*": ["public/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

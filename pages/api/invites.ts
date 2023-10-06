@@ -28,7 +28,7 @@ export const GET = async (_req: NextApiRequest, res: NextApiResponse) => {
   const email: string = _req.query.email as string;
   try {
     await initializeAdmin();
-    const firestore = await getFirestore();
+    const firestore = getFirestore();
     const isInvited = await isUserInvited(firestore, email);
     if (!isInvited) {
       res.status(403).json({
